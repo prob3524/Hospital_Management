@@ -1,0 +1,56 @@
+.superadmin-login {
+    background: #9c27b0
+}
+
+.admin-login {
+    background: #b0de37;
+    color: #000
+}
+
+.accountant-login,.doctor-login {
+    background: #057fab
+}
+
+.receptionist-login {
+    background: #1bbed3
+}
+
+.pharmacist-login {
+    background: #999
+}
+
+.accountant-login {
+    background: #ff9800
+}
+
+.cas-handler-login,.radiologist-login {
+    background: #4aa64e
+}
+
+.patient-login {
+    background: #2f4f4f
+}
+
+.front-site {
+    background: #1bbed3
+}
+
+.lab-technician-login {
+    background-color: #6f4e37
+}
+
+.nurse-login {
+    background-color: #8a2be2
+}
+.all-btns a {
+    width: 100%;
+    padding: 8px;
+    border-radius: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    transition: all .3s;
+    color: #fff;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Login</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Hospital management system">
+  <meta name="keyword" content="hospital,doctor,patient,fever,MD,MS,MBBS">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+
+  <link rel="stylesheet" type="text/css" href="https://hms.infyom.com/assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/login.css">
+
+  <script>
+    $(document).ready(function () {
+      $('.alert').delay(5000).slideUp(300)
+    });
+
+    $(document).on('click', '.language-select', function () {
+      let languageName = $(this).data('id');
+      $.ajax({
+        type: 'get',
+        url: 'set-language',
+        data: {
+          languageName: languageName
+        },
+        success: function () {
+          location.reload();
+        },
+      });
+    });
+  </script>
+</head>
+
+<body
+  class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed toolbar-tablet-and-mobile-fixed aside-enabled aside-fixed">
+  <div class="d-flex flex-column flex-root">
+    <div
+      class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed authImage">
+      <!--begin::Authentication - Sign-in -->
+
+
+      <div class="d-flex flex-column flex-column-fluid align-items-center justify-content-top p-4">
+        <div class="col-12 text-center">
+          <a href="./index.html" class="image mb-7 mb-sm-10" data-turbo="false">
+            <img alt="Logo" src="./favicon.svg" class="img-fluid logo-fix-size">
+          </a>
+        </div>
+        <div class="width-540">
+        </div>
+        <div class="bg-white rounded-15 shadow-md width-540 px-5 px-sm-7 py-10 mx-auto">
+          <h1 class="text-center mb-7">Sign In</h1>
+          <form method="post" action="#">
+            <input type="hidden" name="_token" value="e7UL3wdSRYLKWYuUpZMnbZS2pc8QTPGiG4qTIP7a" autocomplete="off">
+            <div class="mb-sm-7 mb-4">
+              <label for="email" class="form-label">
+                Email:<span class="required"></span>
+              </label>
+              <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required
+                placeholder="Email" value="admin@hms.com">
+            </div>
+            <div class="mb-sm-7 mb-4">
+              <div class="d-flex justify-content-between">
+                <label for="password" class="form-label">Password:<span class="required"></span></label>
+                <a href="#" class="link-info fs-6 text-decoration-none" style="color: hsl(182, 100%, 35%);">
+                  Forgot Password ?
+                </a>
+              </div>
+              <input name="password" type="password" class="form-control" id="password" required placeholder="Password"
+                value="123456">
+            </div>
+            <div class="d-grid">
+              <button type="submit" style="background-color: hsl(182, 100%, 35%);color: white;"
+                class="btn">Login</button>
+            </div>
+            <div class="d-flex align-items-center mb-10 mt-4">
+              <span class="text-gray-700 me-2">New Here?</span>
+              <a href="#" class="link-info fs-6 text-decoration-none" style="color: hsl(182, 100%, 35%);">
+                Create an Account
+              </a>
+            </div>
+          </form>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-9 col-12 all-btns my-5">
+                  <div class="row">
+                    <div class="col-md-4 col-lg-3 mb-4 col-6">
+                      <a class="btn superadmin-login ">super admin</a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 mb-4 col-6">
+                      <a class="btn doctor-login ">doctor</a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 mb-4 col-6">
+                      <a class="btn accountant-login ">accountant</a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 mb-4 col-6">
+                      <a class="btn cas-handler-login ">case handler</a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 mb-4 col-6">
+                      <a class="btn receptionist-login ">receptionist</a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 mb-4 col-6">
+                      <a class="btn pharmacist-login ">pharmacist</a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 mb-4 col-6">
+                      <a class="btn lab-technician-login ">lab technician</a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 mb-4 col-6">
+                      <a class="btn nurse-login ">nurse</a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 mb-4 col-6">
+                      <a class="btn patient-login ">patient</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
